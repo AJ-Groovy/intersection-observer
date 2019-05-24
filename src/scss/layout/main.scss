@@ -1,0 +1,56 @@
+.wrapper {
+    position: relative;
+}
+
+.io-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 9000px;
+    flex-direction: column;
+    width: 50%;
+    float: left;
+}
+
+.box {
+    @include animate(opacity);
+    width: 200px;
+    height: 150px;
+    margin: 5px;
+    background-color: rgb(random(255), random(255), random(255));
+    opacity: 0;
+
+    &.animated {
+        opacity: 1;
+    }
+}
+.box-2 {
+    @include animate(opacity);
+    width: 200px;
+    height: 150px;
+    margin: 5px;
+    background-color: rgb(random(255), random(255), random(255));
+    opacity: 0;
+    border-radius: 50%;
+
+    &.animated {
+        opacity: 1;
+    }
+}
+
+.checker {
+    width: 100%;
+    height: 150px;
+    position: fixed;
+    background-color: red;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+.controls-holder {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
